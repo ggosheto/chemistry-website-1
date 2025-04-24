@@ -55,14 +55,16 @@ export default function SignupPage() {
           {error && <p className="text-sm font-medium text-destructive">{error}</p>}
           <div className="space-y-2">
             <Label htmlFor="name">Име и фамилия</Label>
-            <Input id="name" placeholder="Иван Иванов" value={name} onChange={(e) => setName(e.target.value)} required />
+            <Input id="name" 
+            //placeholder="Вашето Име" 
+            value={name} onChange={(e) => setName(e.target.value)} required />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Имейл</Label>
             <Input
               id="email"
               type="email"
-              placeholder="m@primer.com"
+              //placeholder="вашият имейл"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required

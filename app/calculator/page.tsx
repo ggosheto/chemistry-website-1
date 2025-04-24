@@ -98,22 +98,22 @@ export default function RecyclingImpactCalculator() {
           </div>
         </CardContent>
         <CardFooter>
-          <span className="text-xs text-muted-foreground">Estimates based on EPA data. <Link href="/blog/recycling-tips" className="text-green-600 hover:underline">Learn more</Link></span>
+          <span className="text-xs text-muted-foreground">Оценките са базирани на данни от EPA. <Link href="/blog/recycling-tips" className="text-green-600 hover:underline">Научете повече</Link></span>
         </CardFooter>
       </Card>
 
       {/* Bauxite Water Usage Calculator */}
       <Card className="mt-8">
         <CardHeader>
-          <CardTitle>Bauxite Water Usage Calculator</CardTitle>
+          <CardTitle>Калкулатор за водна консумация при боксит</CardTitle>
           <CardDescription>
-            Estimate how much water is used to process bauxite. (Typical: ~3 m³ water per ton of bauxite)
+            Изчислете колко вода се използва за обработка на боксит. (Типично: ~3 м³ вода на тон боксит)
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <Label htmlFor="bauxite-amount">Amount of Bauxite (tons)</Label>
+              <Label htmlFor="bauxite-amount">Количество боксит (тона)</Label>
               <Input
                 id="bauxite-amount"
                 type="number"
@@ -121,15 +121,15 @@ export default function RecyclingImpactCalculator() {
                 step="any"
                 value={bauxiteAmount}
                 onChange={e => setBauxiteAmount(Number(e.target.value))}
-                placeholder="Enter amount in tons"
+                placeholder="Въведете количество в тонове"
               />
             </div>
-            <Button onClick={calculateWaterUsage} type="button">Calculate Water Usage</Button>
+            <Button onClick={calculateWaterUsage} type="button">Изчисли водната консумация</Button>
             {waterResult !== null && (
               <Alert className="mt-4">
-                <AlertTitle>Estimated Water Usage</AlertTitle>
+                <AlertTitle>Оценена водна консумация</AlertTitle>
                 <AlertDescription>
-                  {bauxiteAmount || 0} ton(s) of bauxite ≈ <b>{waterResult}</b> m³ water
+                  {bauxiteAmount || 0} тон(а) боксит ≈ <b>{waterResult}</b> м³ вода
                 </AlertDescription>
               </Alert>
             )}
@@ -140,16 +140,16 @@ export default function RecyclingImpactCalculator() {
       {/* Aluminum Production Resource Calculator */}
       <Card className="mt-8">
         <CardHeader>
-          <CardTitle>Aluminum Production Resource Calculator</CardTitle>
+          <CardTitle>Калкулатор за ресурси при производство на алуминий</CardTitle>
           <CardDescription>
-            Enter the amount of aluminum you want to produce to estimate the required bauxite, water, and electricity.
-            <br />Typical values: 4 tons bauxite, 15 m³ water, 15,000 kWh electricity per ton aluminum.
+            Въведете количеството алуминий, което искате да произведете, за да изчислите необходимите боксит, вода и електроенергия.
+            <br />Типични стойности: 4 тона боксит, 15 м³ вода, 15 000 kWh електроенергия на тон алуминий.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <Label htmlFor="aluminum-amount">Amount of Aluminum (tons)</Label>
+              <Label htmlFor="aluminum-amount">Количество алуминий (тона)</Label>
               <Input
                 id="aluminum-amount"
                 type="number"
@@ -157,19 +157,19 @@ export default function RecyclingImpactCalculator() {
                 step="any"
                 value={aluminumAmount}
                 onChange={e => setAluminumAmount(Number(e.target.value))}
-                placeholder="Enter amount in tons"
+                placeholder="Въведете количество в тонове"
               />
             </div>
-            <Button onClick={calculateAluminumResources} type="button">Calculate Resources</Button>
+            <Button onClick={calculateAluminumResources} type="button">Изчисли ресурсите</Button>
             {aluminumResult && (
               <Alert className="mt-4">
-                <AlertTitle>Estimated Resources Needed</AlertTitle>
+                <AlertTitle>Оценени необходими ресурси</AlertTitle>
                 <AlertDescription>
                   <ul className="list-disc ml-6">
-                    <li><b>{aluminumAmount || 0}</b> ton(s) aluminum</li>
-                    <li><b>{aluminumResult.bauxite}</b> ton(s) bauxite</li>
-                    <li><b>{aluminumResult.water}</b> m³ water</li>
-                    <li><b>{aluminumResult.electricity}</b> kWh electricity</li>
+                    <li><b>{aluminumAmount || 0}</b> тон(а) алуминий</li>
+                    <li><b>{aluminumResult.bauxite}</b> тон(а) боксит</li>
+                    <li><b>{aluminumResult.water}</b> м³ вода</li>
+                    <li><b>{aluminumResult.electricity}</b> kWh електроенергия</li>
                   </ul>
                 </AlertDescription>
               </Alert>

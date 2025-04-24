@@ -17,7 +17,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
-              <Link href="/signup">Присъединете се към движението</Link>
+              <Link href="/signup">Присъединете се към нашия екип</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/forum">Споделете идеи</Link>
@@ -42,7 +42,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Link href="/blog" className="text-sm font-medium text-green-600 hover:underline">
-                  Прочетете нашите статии 142
+                  Прочетете нашите статии 
                 </Link>
               </CardContent>
             </Card>
@@ -58,7 +58,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Link href="/blog" className="text-sm font-medium text-green-600 hover:underline">
-                  Вземете съвети 142
+                  Вземете съвети 
                 </Link>
               </CardContent>
             </Card>
@@ -74,7 +74,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Link href="/calculator" className="text-sm font-medium text-green-600 hover:underline">
-                  Пробвайте калкулатора 142
+                  Пробвайте калкулатора 
                 </Link>
               </CardContent>
             </Card>
